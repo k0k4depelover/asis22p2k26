@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-// Formulario Preparado de estudio anterior
+
 namespace Mantenimiento2k26
 {
     public partial class FrmLogin : Form
@@ -47,15 +47,14 @@ namespace Mantenimiento2k26
                     return;
                 }
 
-                bool credencialesValidas = true; 
+                bool credencialesValidas = true;
+
                 if (credencialesValidas)
                 {
                     this.Hide();
-                    using (FrmMenu menu = new FrmMenu())
-                    {
-                        menu.ShowDialog();
-                    }
-                    this.Close();
+                    FrmMenu menu = new FrmMenu();
+                    menu.FormClosed += (s, args) => this.Close();
+                    menu.Show();
                 }
                 else
                 {
