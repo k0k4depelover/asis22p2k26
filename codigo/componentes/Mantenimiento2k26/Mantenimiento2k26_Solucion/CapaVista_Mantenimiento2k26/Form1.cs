@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace Mantenimiento2k26
 {
-    public partial class FormNavegador : Form
+    public partial class Form1 : Form
     {
-        public FormNavegador()
+        public Form1()
         {
             InitializeComponent();
+            navegador1.NavegadorMetConfigurar("tblfacultades", 4, 5);
         }
     }
 }
