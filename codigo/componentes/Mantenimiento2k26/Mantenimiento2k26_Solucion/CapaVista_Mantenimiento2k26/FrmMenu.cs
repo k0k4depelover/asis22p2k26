@@ -15,7 +15,7 @@ namespace Mantenimiento2k26
         public FrmMenu()
         {
             InitializeComponent();
-            navegador1.NavegadorMetConfigurar("tblfacultades", 4, 5);
+            navegador1.NavegadorMetConfigurar("tblfacultades", 14, 17);
         }
 
         private void navegador1_Load(object sender, EventArgs e)
