@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
-
+// Formulario Preparado de estudio anterior
 namespace Mantenimiento2k26
 {
     public partial class FrmLogin : Form
@@ -41,17 +41,13 @@ namespace Mantenimiento2k26
         {
             try
             {
-                // Validación básica de campos vacíos
                 if (string.IsNullOrWhiteSpace(TxtUsuario.Text) || string.IsNullOrWhiteSpace(TxtContrasena.Text))
                 {
                     MessageBox.Show("Por favor ingrese usuario y contraseña.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return;
                 }
 
-                // Aquí va tu validación contra la base de datos o módulo de seguridad (ej. BCrypt)
-                // Valida contra tbl_usuario / sesión de seguridad:
-                bool credencialesValidas = true; // Sustituye con tu llamada al controlador
-
+                bool credencialesValidas = true; 
                 if (credencialesValidas)
                 {
                     this.Hide();
